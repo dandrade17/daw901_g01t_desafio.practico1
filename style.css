@@ -13,6 +13,7 @@ body {
 /* ************* RESPONSIVO *************** */
 /* ************************************ */
 
+/* *******Para Index.html */
 
 .container {
     display: grid;
@@ -74,6 +75,92 @@ body {
  
     padding: 10px;
 }
+
+/* ********Para pagina de articulos **********/
+
+.container_art {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "main sidebar"
+        "footer footer"
+    ;
+    min-height: 100vh;
+    gap: 5px;
+}
+
+@media (max-width: 768px){
+    .container_art{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar"
+            "footer"
+        ;
+    }
+
+    .main{
+  margin-right: 10px;
+  margin-left: 10px !important;
+  }
+
+    .sidebar {
+  margin-left: 10px;
+  margin-right: 10px !important;
+  }
+}
+
+.container_art .header {
+    grid-area: header;
+}
+
+
+.container_art .sidebar {
+    grid-area: sidebar;
+}
+
+.container_art .main{
+    grid-area: main;
+}
+
+.container_art .footer{
+    grid-area: footer;
+}
+
+.container_art > *{
+    padding: 10px;
+}
+
+.main, .sidebar {
+  border: 1px solid #b2b2b3;
+}
+
+/* ************************************ */
+/* ************* MAIN *************** */
+/* ************************************ */
+
+.main{
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.sidebar {
+  margin-right: 20px;
+  padding: 5px;
+}
+
+/* ************************************ */
+/* ************* SIDEBAR *************** */
+/* ************************************ */
+
+
+
+
+
 
 /* ************************************ */
 /* ************* HEADER *************** */
